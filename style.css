@@ -18,12 +18,132 @@
     --font-josein: "Josefin Sans", serif;
 }
 
+body {
+    font-size: 15px;
+}
+
 header {
-    height: 450px;
+    height: 650px;
     background-color: black;
     background-image: url(images/desktop/image-hero.jpg);
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+main {
+    margin: 6rem auto;
+    width: 1320px;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.interactive-vr-img {
+    position: relative;
+}
+
+.interactive-vr-text {
+    position: absolute;
+    bottom: 0%;
+    left: 45.3%;
     
+    background-color: var(--White);
+    width: 700px;
+    padding: 6rem 0 0 8rem;
+    font-size: 1.2rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+   
+}
+
+.interactive-vr-text h2 {
+    font-family: var(--font-josein);
+    font-weight: 300;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.interactive-vr-text p {
+    font-family: var(--font-alata);
+    line-height: 1.8rem;
+    width: 560px;
+    color: var(--Dark-Gray);
+}
+
+
+/* creation cards */
+
+.creation-section {
+    margin-top: 6rem;
+}
+
+.creation-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.creation-title h2 {
+    font-family: var(--font-josein);
+    font-weight: 300;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.btn-see-all button {
+    background-color: transparent;
+    border: 2px solid black;
+    cursor: pointer;
+    font-family: var(--font-alata);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: 10px 14px;
+    width: 170px;
+    transition: all .2s ease-in-out;
+}
+
+.btn-see-all button:hover {
+    background-color: black;
+    color: white;
+    border-color: white;
+}
+
+.creation-grid {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    width: 100%;
+}
+
+.creation-grid img {
+    width: 306px;
+}
+
+.creation-card-img {
+    position: relative;
+}
+
+.filter{
+    background: #000;
+    width: 306px;
+    height: 536px;
+    opacity: 0.2;
+    position: absolute;
+    z-index: 99;
+}
+
+.creation-card-text {
+    position: absolute;
+    bottom: 8%;
+    left: 12%;
+    color: white;
+    font-family: var(--font-josein);
+    font-size: 2.2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+
 }
