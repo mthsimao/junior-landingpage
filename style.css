@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 0%);
+    --Dark-Gray: hsl(0, 0%, 55%);
+    --Very-Dark-Gray: hsl(0, 0%, 41%);
+
+    --font-alata:"Alata", sans-serif;
+    --font-josein: "Josefin Sans", serif;
+}
+
+header {
+    height: 450px;
+    background-color: black;
+    background-image: url(images/desktop/image-hero.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
