@@ -23,17 +23,100 @@ body {
 }
 
 header {
-    height: 650px;
     background-color: black;
     background-image: url(images/desktop/image-hero.jpg);
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.filter-background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #00000052;
+}
+
+.width-header {
+    width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    padding: 1rem;
+    height: 75%;
+}
+
+.header-flex {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-social-links {
+    display: inline-flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 2rem;
+    font-family: var(--font-josein);
+    font-size: 1.2rem;
+    list-style: none;
+}
+
+li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.header-social-links a {
+    color: var(--White);
+    text-shadow: 1px 1px 1px black;
+    text-decoration: none;
+    cursor: pointer;
+    padding-bottom: 13px;
+    position: relative;
+}
+
+li:hover .line {
+    display: block;
+}
+
+.line {
+    position: absolute;
+    padding-top: 40px;
+    width: 30px;
+    border-bottom: 3px solid var(--White);
+    display: none;
+    cursor: pointer;
+}
+
+.header-title {
+    border: 3px solid var(--White);
+    width: 650px;
+    padding: 2rem;
+}
+.header-title h2 {
+    color: var(--White);
+    font-family: var(--font-josein);
+    font-weight: 300;
+    font-size: 4.6rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 main {
     margin: 6rem auto;
-    width: 1320px;
+    width: 1170px;
     display: flex;
     flex-direction: column;
     gap: 5rem;
@@ -45,12 +128,11 @@ main {
 
 .interactive-vr-text {
     position: absolute;
-    bottom: 0%;
+    bottom: 5px;
     left: 45.3%;
     
     background-color: var(--White);
-    width: 700px;
-    padding: 6rem 0 0 8rem;
+    padding: 5rem 0 0 5rem;
     font-size: 1.2rem;
 
     display: flex;
@@ -83,6 +165,7 @@ main {
 .creation-title {
     display: flex;
     flex-direction: row;
+    align-items: center;    
     justify-content: space-between;
 }
 
@@ -107,43 +190,414 @@ main {
 
 .btn-see-all button:hover {
     background-color: black;
-    color: white;
-    border-color: white;
+    color: var(--White);
+    border-color: var(--White);
+}
+
+.btn2 {
+    display: none;
 }
 
 .creation-grid {
     margin-top: 4rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
+    gap: 3rem;
     width: 100%;
 }
 
 .creation-grid img {
-    width: 306px;
+    height: 450px;
+    width: 256px;
 }
 
 .creation-card-img {
     position: relative;
-}
-
-.filter{
-    background: #000;
-    width: 306px;
-    height: 536px;
-    opacity: 0.2;
-    position: absolute;
-    z-index: 99;
+    height: 450px;
+    width: 256px;
 }
 
 .creation-card-text {
     position: absolute;
-    bottom: 8%;
-    left: 12%;
-    color: white;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 0 2rem 2.4rem;
+    background: linear-gradient(transparent, #000000a2);
+    color: var(--White);
+    cursor: pointer;
     font-family: var(--font-josein);
     font-size: 2.2rem;
     font-weight: 300;
     text-transform: uppercase;
+    transition: all .2s ease-in-out;
+    height: 450px;
+    width: 256px;
+}
 
+.creation-card-text:hover {
+    background: linear-gradient(#ffffff9d, #ffffffbd);
+    color: black;
+}
+
+
+footer {
+    background-color: var(--Black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer {
+    width: 1170px;
+    padding: 3rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.footer-left {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.footer-links ul, .footer-social-links ul {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 2rem;
+}
+
+.footer-links ul a {
+    font-family: var(--font-josein);
+    font-size: 1rem;
+    letter-spacing: .7px;
+    text-decoration: none;
+    color: var(--White);
+}
+
+.footer-copyright p {
+    font-family: var(--font-alata);
+    font-size: .9rem;
+    letter-spacing: 1px;
+    color: var(--Dark-Gray);
+}
+
+.footer-right {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 2rem;
+}
+
+.footer-social-links ul {
+    gap: 1rem;
+}
+
+.footer-social-links .line {
+    width: 24px;
+    padding-top: 5px;
+}
+
+@media screen and (max-width: 1280px) {
+
+    .width-header {
+        width: 865px;
+    }
+
+    .header-title h2 {
+        font-size: 4rem;
+    }
+
+    main {
+        width: 865px;
+    }
+
+    .interactive-vr-img img {
+        width: 512px;
+    }
+
+    .interactive-vr-text {
+        padding: 3rem 0 0 3rem;
+        font-size: 1.1rem;
+    }
+
+    .interactive-vr-text h2 {
+        font-size: 2rem;
+    }
+
+    .interactive-vr-text p {
+        width: 440px;
+    }
+
+    .creation-title h2 {
+        font-size: 2rem;
+    }
+
+    .creation-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .footer {
+        width: 865px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    header {
+        background-image: url(images/mobile/image-hero.jpg);
+        background-position: center center;
+    }
+
+    .header-nav {
+        position: relative;
+    }
+
+    .header-nav ul {
+        position: absolute;
+        top: 0;
+        right: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        background-color: rgba(51, 53, 55, 0.7);
+        width: 180px;
+        padding: 15px;
+        border-radius: 6px;
+        display: none;
+    }
+
+    .header-nav ul li {
+        padding: 10px;
+    }
+
+    .line {
+        display: none;
+    }
+
+    .header-nav ul li:hover {
+        background-color: rgba(73, 73, 76, 0.80);
+        width: 150px;
+        border-radius: 6px;
+    }
+
+    .header-social-links a {
+        padding: 0;
+    }
+
+    .header-nav ul li:hover .line {
+        display: none;
+        padding: 0;
+    }
+
+    .hamb {
+        color: var(--White);
+        font-size: 1.8rem;
+        text-align: right;
+    }
+
+    .header-title {
+        width: 500px;
+    }
+
+    .header-title h2 {
+        font-size: 3rem;
+    }
+
+    main {
+        padding: 3rem;
+        width: auto;
+    }
+
+    .interactive-vr-img {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    .interactive-vr-text {
+        position: relative;
+        top: 0;
+        left: 0;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+    }
+
+    .interactive-vr-text h2 {
+        width: 380px;
+        text-align: center;
+
+    }
+    .interactive-vr-text p {
+        text-align: center;
+    }
+
+    /* creation section */
+
+    .creation-section {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .btn-see-all {
+        display: none;
+    }
+
+    .btn2 {
+        display: block;
+    }
+
+    .creation-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .btn2 {
+        margin: 0 auto;
+    }
+
+    .creation-card-img {
+        position: relative;
+        width: 654px;
+        height: 240px;
+    }
+
+    .creation-card-img img {
+        display: none;
+    }
+
+    .filter {
+        position: relative;
+        top: 0;
+        left: 0;
+        background-image: url('');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        width: 654px;
+        height: 240px;
+    }
+
+    .deep-earth {
+        background-image: url(images/mobile/image-deep-earth.jpg);
+    }
+
+    .night-arcade {
+        background-image: url(images/mobile/image-night-arcade.jpg);
+    }
+
+    .soccer-team-vr {
+        background-image: url(images/mobile/image-soccer-team.jpg);
+    }
+
+    .the-grid {
+        background-image: url(images/mobile/image-grid.jpg);
+    }
+
+    .from-up-above-vr {
+        background-image: url(images/mobile/image-from-above.jpg);
+    }
+
+    .pocket-borealis {
+        background-image: url(images/mobile/image-pocket-borealis.jpg);
+    }
+
+    .the-curiosity {
+        background-image: url(images/mobile/image-curiosity.jpg);
+    }
+
+    .make-it-fisheye {
+        background-image: url(images/mobile/image-fisheye.jpg);
+    }
+
+    .creation-card-text {
+        width: 654px;
+        height: 240px;
+    }
+
+  
+    .footer {
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .footer-left {
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .footer-links ul {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.8rem;
+    }
+    
+}
+
+@media screen and (max-width: 750px) {
+
+    .width-header {
+        width: auto;
+    }
+    
+    main {
+        padding: 1rem;
+        width: 420px;
+    }
+
+    .interactive-vr-img img {
+        width: 376px;
+    }
+
+    .interactive-vr-text p {
+        width: auto;
+    }
+
+    .creation-card-img {
+        position: relative;
+        width: 376px;
+        height: 200px;
+    }
+
+    .creation-card-text {
+        width: 376px;
+        height: 200px;
+    }
+
+    .filter {
+        width: 376px;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .header-title {
+        width: 380px;
+    }
+
+    .header-title h2 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .header-title {
+        width: 340px;
+    }
+
+    .header-title h2 {
+        font-size: 1.6rem;
+    }
 }
