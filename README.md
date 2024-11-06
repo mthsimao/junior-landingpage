@@ -9,7 +9,7 @@
 
 ### Links
 
-- Solution URL: [Solution](https://mthsimao.github.io/junior-landingpage/)
+- Solution URL: [Solution](https://mthsimao.github.io/loopstudios-landingpage/)
 
 
 
