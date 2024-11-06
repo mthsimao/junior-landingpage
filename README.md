@@ -1,4 +1,4 @@
-# Frontend Mentor - Junior Landing page
+# Frontend Mentor - Loopstudios Landing page
 
 <img src="images/project-finished.png">
 
@@ -22,7 +22,5 @@
 
 ## Author
 
-- My portfolio - <a href="https://mthsimao.github.io/portfolio" target="_blank">Matheus Simão</a>
+- My portfolio - <a href="https://matsimao.vercel.app" target="_blank">Matheus Simão</a>
 - Frontend Mentor - <a href="https://www.frontendmentor.io/profile/mthsimao" target="_blank"> mthsimao</a>
-
-[Click here to visit](https://mthsimao.github.io/junior-landingpage/)
